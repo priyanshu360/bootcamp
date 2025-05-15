@@ -41,7 +41,7 @@ const CurriculumForm: React.FC<CurriculumFormProps> = ({ isOpen, onClose }) => {
       if (supabaseError) throw supabaseError;
 
       // Trigger PDF download
-      const pdfUrl = '../../public/static/C++ & DSA Summer Bootcamp Curriculum.pdf'; // Replace with actual PDF URL
+      const pdfUrl = '/static/C++ & DSA Summer Bootcamp Curriculum.pdf'; // Replace with actual PDF URL
       const link = document.createElement('a');
       link.href = pdfUrl;
       link.download = 'DSA_Bootcamp_Curriculum.pdf';
