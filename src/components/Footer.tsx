@@ -1,10 +1,12 @@
 import { useEffect, useRef, useState } from 'react';
 import { Code2, FileDown, Mail } from 'lucide-react';
 import RegistrationForm from './RegistrationForm';
+import CurriculumForm from './CurriculumForm';
 
 const Footer = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [showRegistration, setShowRegistration] = useState(false);
+  const [showCurriculum, setShowCurriculum] = useState(false);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -96,14 +98,18 @@ const Footer = () => {
                   className="w-full bg-cyan-500 hover:bg-cyan-400 text-gray-900 font-bold py-2 px-4 rounded transition-all duration-300 flex items-center justify-center gap-2 font-mono"
                 >
                   Register Now
-                </button>              <button className="w-full border border-fuchsia-500 text-fuchsia-400 hover:bg-fuchsia-500/10 font-bold py-2 px-4 rounded transition-all duration-300 flex items-center justify-center gap-2 font-mono">
+                </button>
+                <button
+                  onClick={() => setShowCurriculum(true)}
+                  className="w-full border border-fuchsia-500 text-fuchsia-400 hover:bg-fuchsia-500/10 font-bold py-2 px-4 rounded transition-all duration-300 flex items-center justify-center gap-2 font-mono"
+                >
                   <FileDown className="w-4 h-4" />
                   Syllabus PDF
                 </button>
                 <div className="flex items-center gap-2 text-gray-400 font-mono">
                   <Mail className="w-4 h-4 text-cyan-400" />
                   <a href="mailto:code@bootcamp.dev" className="hover:text-cyan-400 transition-colors duration-300">
-                    code@bootcamp.dev
+                    info@pareekshagpt.com
                   </a>
                 </div>
               </div>
@@ -128,6 +134,10 @@ const Footer = () => {
       <RegistrationForm
         isOpen={showRegistration}
         onClose={() => setShowRegistration(false)}
+      />
+      <CurriculumForm
+        isOpen={showCurriculum}
+        onClose={() => setShowCurriculum(false)}
       />
     </>
   );

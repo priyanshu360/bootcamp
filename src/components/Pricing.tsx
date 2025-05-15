@@ -54,10 +54,6 @@ const Pricing = () => {
             </div>
 
             <div className="flex justify-center items-center w-full max-w-md">
-              <button className="bg-cyan-500 hover:bg-cyan-400 text-gray-900 font-bold py-3 px-6 rounded-md transition-all duration-300 flex items-center justify-center gap-2">
-                <FileDown className="w-5 h-5" />
-                Download Brochure
-              </button>
             </div>
           </div>
         </div>

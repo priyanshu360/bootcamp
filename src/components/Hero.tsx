@@ -1,13 +1,14 @@
-
 import { useState, useEffect } from 'react';
 import { ArrowRight, Code2, Sparkles, Brain, Trophy } from 'lucide-react';
 import RegistrationForm from './RegistrationForm';
+import CurriculumForm from './CurriculumForm';
 
 const Hero = () => {
   const [text, setText] = useState('');
   const finalText = 'CRACK THE CODE: MASTER DSA WITH C++';
   const [cursorVisible, setCursorVisible] = useState(true);
   const [showRegistration, setShowRegistration] = useState(false);
+  const [showCurriculum, setShowCurriculum] = useState(false);
 
   useEffect(() => {
     let index = 0;
@@ -89,7 +90,10 @@ const Hero = () => {
                 REGISTER NOW
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform duration-300" />
               </button>
-              <button className="w-full sm:w-auto border border-fuchsia-500 text-fuchsia-400 hover:bg-fuchsia-500/10 font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-md transition-all duration-300">
+              <button
+                onClick={() => setShowCurriculum(true)}
+                className="w-full sm:w-auto border border-fuchsia-500 text-fuchsia-400 hover:bg-fuchsia-500/10 font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-md transition-all duration-300"
+              >
                 VIEW CURRICULUM
               </button>
             </div>
@@ -99,6 +103,10 @@ const Hero = () => {
       <RegistrationForm
         isOpen={showRegistration}
         onClose={() => setShowRegistration(false)}
+      />
+      <CurriculumForm
+        isOpen={showCurriculum}
+        onClose={() => setShowCurriculum(false)}
       />
     </>
   );
