@@ -39,7 +39,7 @@ const Hero = () => {
         <div className="relative z-10 text-center max-w-5xl mx-auto">
           <div className="flex items-center justify-center mb-6 flex-wrap gap-2">
             <Code2 className="text-cyan-400 w-6 h-6 sm:w-8 sm:h-8" />
-            <p className="font-mono text-sm sm:text-lg text-cyan-400">4-week program | 3 classes/week | 2 hours/class</p>
+            <p className="font-mono text-sm sm:text-lg text-cyan-400">5-week program | 2 classes/week | 2 hours/class</p>
           </div>
 
           <h1 className="text-2xl sm:text-4xl md:text-6xl lg:text-7xl font-bold font-mono mb-6 tracking-tight text-white px-2">

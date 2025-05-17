@@ -84,8 +84,8 @@ const Footer = () => {
               <h3 className="text-white font-bold mb-6 font-mono">Next Batch Info</h3>
               <ul className="space-y-4 font-mono">
                 <li className="text-cyan-400">🚀 Starts June 2nd</li>
-                <li className="text-gray-400">⏳ 4 Weeks</li>
-                <li className="text-gray-400">📚 3 Classes/Week</li>
+                <li className="text-gray-400">⏳ 5 Weeks</li>
+                <li className="text-gray-400">📚 2 Classes/Week</li>
                 <li className="text-gray-400">⌚ 2 Hours/Class</li>
               </ul>
             </div>

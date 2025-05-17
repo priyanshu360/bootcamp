@@ -1,24 +1,4 @@
-import React, { useEffect } from 'react';
-
 const BackgroundEffects = () => {
-  useEffect(() => {
-    // Custom cursor effect
-    const cursor = document.getElementById('custom-cursor');
-    
-    const updateCursorPosition = (e: MouseEvent) => {
-      if (cursor) {
-        cursor.style.left = `${e.clientX - 16}px`;
-        cursor.style.top = `${e.clientY - 16}px`;
-      }
-    };
-    
-    document.addEventListener('mousemove', updateCursorPosition);
-    
-    return () => {
-      document.removeEventListener('mousemove', updateCursorPosition);
-    };
-  }, []);
-
   return (
     <>
       {/* Circuit pattern overlay */}
