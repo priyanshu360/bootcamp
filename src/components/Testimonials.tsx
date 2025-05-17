@@ -1,40 +1,104 @@
-import React, { useState } from 'react';
-import { ChevronLeft, ChevronRight, MinusSquare, Maximize2, X } from 'lucide-react';
+import { useState, useEffect, useRef } from 'react';
+import { ChevronLeft, ChevronRight, X, MinusSquare, Maximize2, Pause, Play } from 'lucide-react';
 
 
 const testimonials = [
   {
-    name: "Riya Mehta",
-    role: "B.Tech CSE, 2nd Year - VIT Vellore",
-    image: "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=600",
-    text: "I joined the bootcamp during my summer break after 1st year, and it completely changed my approach to coding. By 2nd year, I was already solving DSA problems on LeetCode and contributing to college hackathons.",
-    company: "vit.ac.in"
+    name: "Arjun Sharma",
+    role: "12th Pass (CBSE) - Joining ABES Engineering College, Ghaziabad",
+    image: "/1.jpeg",
+    text: "I was honestly clueless about coding after 12th boards. Couldn't tell the difference between C++ and HTML! This bootcamp was a lifesaver - they actually made pointers make sense (if you know, you know 😅). Now I'm chilling while my future classmates are panicking about their first programming class.",
+    company: "abes.ac.in"
   },
   {
-    name: "Sneha Reddy",
-    role: "MCA 1st Year - Osmania University",
-    image: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=600",
-    text: "This bootcamp helped me bridge the gap between theory and actual coding. I used to struggle with recursion and STL, but the live sessions and assignments made them clear. It's been a game-changer in my MCA journey.",
-    company: "osmania.ac.in"
+    name: "Shruti Deshmukh",
+    role: "12th Pass (CBSE) - Joining College of Engineering, Pune",
+    image: "/3.jpeg",
+    text: "Coming from a bio background, I was lowkey terrified about engineering coding classes. This bootcamp started so basic (thank goodness!) and the instructors never made me feel stupid for asking 'dumb' questions. I went from 'what's a for-loop?' to implementing my own linked list in C++.",
+    company: "coep.org.in"
   },
   {
-    name: "Raghav Nair",
-    role: "B.Tech IT, Final Year - SRM Institute of Science and Technology",
-    image: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=600",
-    text: "I took this bootcamp before my placement season. The mock interviews, resume guidance, and DSA practice helped me land multiple shortlists. I wish I had done this earlier during my 2nd year.",
-    company: "srmist.edu.in"
+    name: "Uday Kumar",
+    role: "B.Tech CSE, 1st Year - PES University, Bangalore",
+    image: "/2.jpeg",
+    text: "The weekend sessions were perfect for my packed schedule. My college prof would fly through sorting algorithms in 10 minutes flat, but the bootcamp actually showed WHY they work with visualizations. My favorite part was the Discord group where we'd help each other debug code at midnight before assignments were due!",
+    company: "pes.edu"
+  },
+  {
+    name: "Meera Sharma",
+    role: "12th Pass (State Board) - Joining SSN College of Engineering, Chennai",
+    image: "/4.jpeg",
+    text: "I had literally ZERO coding knowledge after 12th. Like, The bootcamp instructors never judged and explained everything step by step. The Hindi explanations alongside English were so helpful! My brother (who's a software engineer) was shocked at how quickly I picked things up.",
+    company: "ssn.edu.in"
+  },
+  {
+    name: "Mukul Nambiar",
+    role: "12th Pass (CBSE) - Joining Manipal Institute of Technology, Karnataka",
+    image: "/5.jpeg",
+    text: "Took this during my drop year and honestly it kept me sane. The instructors make learning fun with their random jokes and real-life examples. They explained pointers better than any YouTube video I watched (and trust me, I watched MANY). Now I'm solving medium LeetCode problems!",
+    company: "manipal.edu"
   }
 ];
+
 const Testimonials = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [maximized, setMaximized] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(true);
+  const timerRef = useRef(null);
+  const intervalTime = 5000; // Time between auto-scrolls (5 seconds)
+
+  // Setup auto-scroll
+  useEffect(() => {
+    if (isPlaying) {
+      timerRef.current = setInterval(() => {
+        setActiveIndex((prev) => (prev === testimonials.length - 1 ? 0 : prev + 1));
+      }, intervalTime);
+    }
+
+    return () => {
+      if (timerRef.current) {
+        clearInterval(timerRef.current);
+      }
+    };
+  }, [isPlaying]);
+
+  // Pause auto-scroll when hovering
+  const handleMouseEnter = () => {
+    setIsPlaying(false);
+  };
+
+  const handleMouseLeave = () => {
+    setIsPlaying(true);
+  };
+
+  const togglePlayPause = () => {
+    setIsPlaying(!isPlaying);
+  };
 
   const goToNext = () => {
     setActiveIndex((prev) => (prev === testimonials.length - 1 ? 0 : prev + 1));
+    // Reset timer when manually navigating
+    if (timerRef.current) {
+      clearInterval(timerRef.current);
+      if (isPlaying) {
+        timerRef.current = setInterval(() => {
+          setActiveIndex((prev) => (prev === testimonials.length - 1 ? 0 : prev + 1));
+        }, intervalTime);
+      }
+    }
   };
 
   const goToPrev = () => {
     setActiveIndex((prev) => (prev === 0 ? testimonials.length - 1 : prev - 1));
+    // Reset timer when manually navigating
+    if (timerRef.current) {
+      clearInterval(timerRef.current);
+      if (isPlaying) {
+        timerRef.current = setInterval(() => {
+          setActiveIndex((prev) => (prev === testimonials.length - 1 ? 0 : prev + 1));
+        }, intervalTime);
+      }
+    }
   };
 
   return (
@@ -47,12 +111,15 @@ const Testimonials = () => {
             <span className="text-fuchsia-400">/&gt;</span>
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
-            Real developers who leveled up their careers through our bootcamp
+            Students who leveled up their skills through our bootcamp
           </p>
         </div>
 
-        <div className={`relative mx-auto transition-all duration-300 ${maximized ? 'max-w-4xl' : 'max-w-2xl'
-          }`}>
+        <div
+          className={`relative mx-auto transition-all duration-300 ${maximized ? 'max-w-4xl' : 'max-w-2xl'}`}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+        >
           {/* Retro computer window */}
           <div className="bg-slate-800 border-2 border-slate-600 rounded-lg overflow-hidden shadow-xl">
             {/* Window title bar */}
@@ -66,6 +133,12 @@ const Testimonials = () => {
                 </span>
               </div>
               <div className="flex items-center space-x-2">
+                <button
+                  onClick={togglePlayPause}
+                  className="text-gray-400 hover:text-white"
+                >
+                  {isPlaying ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4" />}
+                </button>
                 <button
                   onClick={() => setMaximized(!maximized)}
                   className="text-gray-400 hover:text-white"
@@ -120,7 +193,7 @@ const Testimonials = () => {
               </div>
             </div>
 
-            {/* Navigation controls */}
+            {/* Navigation controls with progress bar */}
             <div className="bg-slate-700 px-4 py-3 flex justify-between border-t border-slate-600">
               <button
                 onClick={goToPrev}
@@ -134,8 +207,7 @@ const Testimonials = () => {
                   <button
                     key={index}
                     onClick={() => setActiveIndex(index)}
-                    className={`w-2 h-2 rounded-full ${index === activeIndex ? 'bg-cyan-400' : 'bg-gray-500'
-                      }`}
+                    className={`w-2 h-2 rounded-full ${index === activeIndex ? 'bg-cyan-400' : 'bg-gray-500'}`}
                   />
                 ))}
               </div>
@@ -147,8 +219,33 @@ const Testimonials = () => {
                 <ChevronRight className="w-5 h-5 ml-1" />
               </button>
             </div>
+
+            {/* Auto-scroll progress bar */}
+            {isPlaying && (
+              <div className="bg-slate-900 h-1 w-full">
+                <div
+                  className="bg-fuchsia-500 h-full transition-all duration-300"
+                  style={{
+                    width: '100%',
+                    animation: `progressAnimation ${intervalTime}ms linear infinite`,
+                  }}
+                ></div>
+              </div>
+            )}
           </div>
         </div>
+
+        {/* CSS for progress bar animation */}
+        <style jsx>{`
+          @keyframes progressAnimation {
+            0% {
+              width: 0%;
+            }
+            100% {
+              width: 100%;
+            }
+          }
+        `}</style>
       </div>
     </section>
   );
