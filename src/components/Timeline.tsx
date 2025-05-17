@@ -1,32 +1,38 @@
-import React, { useEffect, useRef } from 'react';
-import { BookOpen, Code2, Brain, Trophy, Rocket } from 'lucide-react';
+import { useEffect, useRef } from 'react';
+import { Lightbulb, BookOpen, Code2, Brain, Trophy, Rocket } from 'lucide-react';
+
 
 const timelineData = [
   {
-    title: "📘 Week 1: C++ Fundamentals & Programming Basics",
+    title: "📘  C++ Fundamentals & Programming Basics",
     description: "Kickstart your coding journey with C++ syntax, I/O, conditionals, loops, and debugging.",
     icon: <BookOpen className="w-6 h-6 text-cyan-400" />,
     weeks: "Week 1"
   },
   {
-    title: "🧮 Week 2: Functions, Arrays & Strings",
+    title: "🧮  Functions, Arrays & Strings",
     description: "Dive into functions, recursion, arrays, and string manipulation with real-world problems.",
     icon: <Code2 className="w-6 h-6 text-cyan-400" />,
     weeks: "Week 2"
   },
   {
-    title: "🔁 Week 3: Sorting, Searching & 2D Arrays",
+    title: "🔁  Sorting, Searching & 2D Arrays",
     description: "Learn sorting algorithms, binary search, and hands-on practice with 2D arrays.",
     icon: <Brain className="w-6 h-6 text-fuchsia-400" />,
     weeks: "Week 3"
   },
   {
-    title: "🚀 Week 4: Pointers, STL & Final Project",
+    title: "🚀  Pointers, STL & Final Project",
     description: "Understand pointers, master STL, and wrap up with a guided project and interview prep.",
     icon: <Rocket className="w-6 h-6 text-green-400" />,
     weeks: "Week 4"
+  },
+  {
+    title: "🧠  Doubt Clearance & What’s Next",
+    description: "Resolve your doubts, strengthen concepts with problem-solving sessions, and explore future learning paths.",
+    icon: <Lightbulb className="w-6 h-6 text-yellow-400" />,
+    weeks: "Week 5"
   }
-
 ];
 
 const Timeline = () => {

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 
 const FAQ = () => {
@@ -11,7 +11,7 @@ const FAQ = () => {
     },
     {
       question: "What is the class schedule?",
-      answer: "Classes are held 3 times a week, 2 hours per session. The schedule is designed to accommodate both school/college timings and provides enough time for practice between sessions."
+      answer: "Classes are held 2 times a week, 2 hours per session. The schedule is designed to accommodate both school/college timings and provides enough time for practice between sessions."
     },
     {
       question: "How will the classes be conducted?",
@@ -27,7 +27,7 @@ const FAQ = () => {
     },
     {
       question: "Is there a refund policy?",
-      answer: "Yes, we offer a 100% refund if you're not satisfied with the first three classes. No questions asked!"
+      answer: "Yes, we offer a 100% refund if you're not satisfied with the first two classes. No questions asked!"
     }
   ];
 
