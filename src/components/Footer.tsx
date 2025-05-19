@@ -66,10 +66,10 @@ const Footer = () => {
             <div>
               <h3 className="text-white font-bold mb-6 font-mono">Quick Links</h3>
               <ul className="space-y-4">
-                {['About Us', 'FAQs', 'Terms & Conditions', 'Privacy Policy'].map((item, i) => (
+                {['Instructors', 'FAQ', 'Testimonials', 'Pricing'].map((item, i) => (
                   <li key={i}>
                     <a
-                      href="#"
+                      href={`#${item.toLowerCase().replace(' ', '-')}`}
                       className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 group flex items-center font-mono"
                     >
                       <span className="text-fuchsia-500 mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">$</span>
@@ -120,17 +120,9 @@ const Footer = () => {
             <p className="text-gray-500 text-sm font-mono mb-4 md:mb-0">
               © 2025 DSABootcamp Inc. | Made with 💻 & ☕ by geeks, for geeks.
             </p>
-            <div className="flex space-x-6">
-              <a href="#" className="text-gray-500 hover:text-gray-300 text-sm transition-colors duration-300 font-mono">
-                Privacy Policy
-              </a>
-              <a href="#" className="text-gray-500 hover:text-gray-300 text-sm transition-colors duration-300 font-mono">
-                Terms of Service
-              </a>
-            </div>
           </div>
         </div>
-      </footer>
+      </footer >
       <RegistrationForm
         isOpen={showRegistration}
         onClose={() => setShowRegistration(false)}

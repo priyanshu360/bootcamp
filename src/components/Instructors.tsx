@@ -2,28 +2,26 @@ import { useState } from 'react';
 import { Github, Linkedin, Twitter, Code2, Trophy, Star } from 'lucide-react';
 
 const instructors = [
- 
   {
-    name: "Amit Patel",
-    title: "Algorithms Specialist",
-    specialty: "Graph Algorithms & Trees",
-    bio: "Microsoft SDE with deep expertise in graph algorithms. Author of 'DSA Made Easy' blog series. Mentored 300+ students in competitive programming.",
-    image: "https://images.pexels.com/photos/2406949/pexels-photo-2406949.jpeg?auto=compress&cs=tinysrgb&w=600",
+    name: "Priyanshu Rajput",
+    title: "Expert @Codeforces",
+    specialty: "Competitive Programming",
+    bio: "Hi, I'm Priyanshu Rajput, a backend-focused software developer and competitive programmer passionate about teaching the core of computer science in a practical, beginner-friendly way.",
+    image: "/priyanshu.jpeg",
     stats: {
-      exp: 4,
-      problems: 750,
-      students: 300
+      exp: 3,
+      problems: 950,
+      students: 100
     },
-    achievements: "Master @Codeforces | 6⭐ @CodeChef",
+    achievements: "Senior Software Engineer @Finbox | Ex @Juspay, @JungleeGames",
     social: {
-      github: "github.com/amitpatel",
-      twitter: "twitter.com/amitpatel",
-      linkedin: "linkedin.com/in/amitpatel"
+      github: "github.com/priyanshu360",
+      twitter: "twitter.com/priyanshuxtwt",
+      linkedin: "linkedin.com/in/priyanshu-rajput-278993127"
     }
   },
   {
     name: "Himanshu Saini",
-    title: "C++ & DSA Expert",
     specialty: "Problem Solving Strategies",
     bio: "Ex-Masai Technical instructor. Helped 200+ students crack Interviews. Known for teaching systematic problem-solving approaches.",
     image: "/static/himanshu.jpg",
@@ -32,7 +30,7 @@ const instructors = [
       problems: 900,
       students: 200
     },
-    achievements: "Specialist @Codeforces | 4⭐ @CodeChef",
+     achievements: "Specialist @Codeforces | 4⭐ @CodeChef",
     social: {
       github: "github.com/himanshu257git",
       linkedin: "linkedin.com/in/himanshuu257"
