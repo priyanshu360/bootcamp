@@ -22,20 +22,21 @@ const instructors = [
   },
   {
     name: "Himanshu Saini",
+    title: "Specialist @Codeforces",
     specialty: "Problem Solving Strategies",
-    bio: "Ex-Masai Technical instructor. Helped 200+ students crack Interviews. Known for teaching systematic problem-solving approaches.",
+    bio: "I’m a full-stack developer helping beginners master C++ and DSA through practical, no-fluff learning — just the way I wish I’d learned.",
     image: "/static/himanshu.jpg",
     stats: {
       exp: 3,
       problems: 900,
       students: 200
     },
-     achievements: "Specialist @Codeforces | 4⭐ @CodeChef",
+    achievements: "Specialist Programmer @Infosys | Ex-Masai Technical instructor",
     social: {
       github: "github.com/himanshu257git",
       linkedin: "linkedin.com/in/himanshuu257"
     }
-  }
+  },
 ];
 
 const Instructors = () => {
