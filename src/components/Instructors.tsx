@@ -73,7 +73,7 @@ const Instructors = () => {
                     <img
                       src={instructor.image}
                       alt={instructor.name}
-                      className="w-full h-full  object-center transition-transform duration-500 hover:scale-105"
+                      className="w-full h-full  object-cover transition-transform duration-500 hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent opacity-70"></div>
 
