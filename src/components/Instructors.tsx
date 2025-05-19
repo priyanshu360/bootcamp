@@ -1,43 +1,8 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Github, Linkedin, Twitter, Code2, Trophy, Star } from 'lucide-react';
 
 const instructors = [
-  // {
-  //   name: "Rajesh Kumar",
-  //   title: "Lead DSA Instructor",
-  //   specialty: "Dynamic Programming Expert",
-  //   bio: "Ex-Google SDE with 6+ years of experience. Solved 1000+ DSA problems on LeetCode. Passionate about teaching algorithmic thinking.",
-  //   image: "https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&w=600",
-  //   stats: {
-  //     exp: 6,
-  //     problems: 1000,
-  //     students: 500
-  //   },
-  //   achievements: "Specialist @Codeforces | 6⭐ @CodeChef",
-  //   social: {
-  //     github: "github.com/rajeshkumar",
-  //     twitter: "twitter.com/rajeshkumar",
-  //     linkedin: "linkedin.com/in/rajeshkumar"
-  //   }
-  // },
-  // {
-  //   name: "Priya Sharma",
-  //   title: "C++ & STL Expert",
-  //   specialty: "Competitive Programming",
-  //   bio: "ICPC World Finalist. Conducted 100+ workshops on C++ and DSA. Known for breaking down complex concepts into simple explanations.",
-  //   image: "https://images.pexels.com/photos/3792581/pexels-photo-3792581.jpeg?auto=compress&cs=tinysrgb&w=600",
-  //   stats: {
-  //     exp: 5,
-  //     problems: 800,
-  //     students: 400
-  //   },
-  //   achievements: "Expert @Codeforces | 5⭐ @CodeChef",
-  //   social: {
-  //     github: "github.com/priyasharma",
-  //     twitter: "twitter.com/priyasharma",
-  //     linkedin: "linkedin.com/in/priyasharma"
-  //   }
-  // },
+ 
   {
     name: "Amit Patel",
     title: "Algorithms Specialist",
@@ -57,21 +22,20 @@ const instructors = [
     }
   },
   {
-    name: "Neha Gupta",
-    title: "Interview Prep Expert",
+    name: "Himanshu Saini",
+    title: "C++ & DSA Expert",
     specialty: "Problem Solving Strategies",
-    bio: "Ex-Amazon SDE. Helped 200+ students crack top tech interviews. Known for teaching systematic problem-solving approaches.",
-    image: "https://images.pexels.com/photos/1239288/pexels-photo-1239288.jpeg?auto=compress&cs=tinysrgb&w=600",
+    bio: "Ex-Masai Technical instructor. Helped 200+ students crack Interviews. Known for teaching systematic problem-solving approaches.",
+    image: "/static/himanshuu.jpg",
     stats: {
-      exp: 5,
+      exp: 3,
       problems: 900,
       students: 200
     },
-    achievements: "Expert @Codeforces | 5⭐ @CodeChef",
+    achievements: "Specialist @Codeforces | 4⭐ @CodeChef",
     social: {
-      github: "github.com/nehagupta",
-      twitter: "twitter.com/nehagupta",
-      linkedin: "linkedin.com/in/nehagupta"
+      github: "github.com/himanshu257git",
+      linkedin: "linkedin.com/in/himanshuu257"
     }
   }
 ];
@@ -110,7 +74,7 @@ const Instructors = () => {
                     <img
                       src={instructor.image}
                       alt={instructor.name}
-                      className="w-full h-full object-cover object-center transition-transform duration-500 hover:scale-105"
+                      className="w-full h-full  object-center transition-transform duration-500 hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent opacity-70"></div>
 
