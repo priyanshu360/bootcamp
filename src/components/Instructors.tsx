@@ -26,7 +26,7 @@ const instructors = [
     title: "C++ & DSA Expert",
     specialty: "Problem Solving Strategies",
     bio: "Ex-Masai Technical instructor. Helped 200+ students crack Interviews. Known for teaching systematic problem-solving approaches.",
-    image: "/static/himanshuu.jpg",
+    image: "/static/himanshu.jpg",
     stats: {
       exp: 3,
       problems: 900,
