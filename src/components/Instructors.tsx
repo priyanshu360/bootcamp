@@ -2,72 +2,36 @@ import React, { useState } from 'react';
 import { Github, Linkedin, Twitter, Code2, Trophy, Star } from 'lucide-react';
 
 const instructors = [
-  // {
-  //   name: "Rajesh Kumar",
-  //   title: "Lead DSA Instructor",
-  //   specialty: "Dynamic Programming Expert",
-  //   bio: "Ex-Google SDE with 6+ years of experience. Solved 1000+ DSA problems on LeetCode. Passionate about teaching algorithmic thinking.",
-  //   image: "https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&w=600",
-  //   stats: {
-  //     exp: 6,
-  //     problems: 1000,
-  //     students: 500
-  //   },
-  //   achievements: "Specialist @Codeforces | 6⭐ @CodeChef",
-  //   social: {
-  //     github: "github.com/rajeshkumar",
-  //     twitter: "twitter.com/rajeshkumar",
-  //     linkedin: "linkedin.com/in/rajeshkumar"
-  //   }
-  // },
-  // {
-  //   name: "Priya Sharma",
-  //   title: "C++ & STL Expert",
-  //   specialty: "Competitive Programming",
-  //   bio: "ICPC World Finalist. Conducted 100+ workshops on C++ and DSA. Known for breaking down complex concepts into simple explanations.",
-  //   image: "https://images.pexels.com/photos/3792581/pexels-photo-3792581.jpeg?auto=compress&cs=tinysrgb&w=600",
-  //   stats: {
-  //     exp: 5,
-  //     problems: 800,
-  //     students: 400
-  //   },
-  //   achievements: "Expert @Codeforces | 5⭐ @CodeChef",
-  //   social: {
-  //     github: "github.com/priyasharma",
-  //     twitter: "twitter.com/priyasharma",
-  //     linkedin: "linkedin.com/in/priyasharma"
-  //   }
-  // },
   {
-    name: "Amit Patel",
-    title: "Algorithms Specialist",
-    specialty: "Graph Algorithms & Trees",
-    bio: "Microsoft SDE with deep expertise in graph algorithms. Author of 'DSA Made Easy' blog series. Mentored 300+ students in competitive programming.",
-    image: "https://images.pexels.com/photos/2406949/pexels-photo-2406949.jpeg?auto=compress&cs=tinysrgb&w=600",
+    name: "Priyanshu Rajput",
+    title: "Expert @Codeforces",
+    specialty: "Competitive Programming",
+    bio: "Hi, I'm Priyanshu Rajput, a backend-focused software developer and competitive programmer passionate about teaching the core of computer science in a practical, beginner-friendly way.",
+    image: "/priyanshu.jpeg",
     stats: {
-      exp: 4,
-      problems: 750,
-      students: 300
+      exp: 3,
+      problems: 950,
+      students: 100
     },
-    achievements: "Master @Codeforces | 6⭐ @CodeChef",
+    achievements: "Senior Software Engineer @Finbox | Ex @Juspay, @JungleeGames",
     social: {
-      github: "github.com/amitpatel",
-      twitter: "twitter.com/amitpatel",
-      linkedin: "linkedin.com/in/amitpatel"
+      github: "github.com/priyanshu360",
+      twitter: "twitter.com/priyanshuxtwt",
+      linkedin: "linkedin.com/in/priyanshu-rajput-278993127"
     }
   },
   {
-    name: "Neha Gupta",
-    title: "Interview Prep Expert",
+    name: "Himanshu Saini",
+    title: "",
     specialty: "Problem Solving Strategies",
     bio: "Ex-Amazon SDE. Helped 200+ students crack top tech interviews. Known for teaching systematic problem-solving approaches.",
     image: "https://images.pexels.com/photos/1239288/pexels-photo-1239288.jpeg?auto=compress&cs=tinysrgb&w=600",
     stats: {
       exp: 5,
-      problems: 900,
+      problems: 700,
       students: 200
     },
-    achievements: "Expert @Codeforces | 5⭐ @CodeChef",
+    achievements: "@Codeforces | 5⭐ @CodeChef",
     social: {
       github: "github.com/nehagupta",
       twitter: "twitter.com/nehagupta",
