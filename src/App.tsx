@@ -10,15 +10,15 @@ import FAQ from './components/FAQ';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
 import BackgroundEffects from './components/BackgroundEffects';
-import { FaRocket } from 'react-icons/fa';
+import { Code } from 'lucide-react';
 function App() {
   useEffect(() => {
     const cursor = document.getElementById('custom-cursor');
     
     const moveCursor = (e: MouseEvent) => {
       if (cursor) {
-        cursor.style.left = e.clientX - 16 + 'px';
-        cursor.style.top = e.clientY - 16 + 'px';
+        cursor.style.left = e.clientX  + 'px';
+        cursor.style.top = e.clientY + 'px';
       }
     };
 
@@ -46,7 +46,7 @@ function App() {
       <Footer />
       
       <div id="custom-cursor" className="fixed w-8 h-8 pointer-events-none z-50 mix-blend-screen">
-        <FaRocket className="w-full h-full text-cyan-400 animate-pulse" />
+        <Code className="w-full h-full text-cyan-400 animate-pulse" />
       </div>
 
     </div>
