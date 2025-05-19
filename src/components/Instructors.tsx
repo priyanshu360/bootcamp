@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Github, Linkedin, Twitter, Code2, Trophy, Star } from 'lucide-react';
 
 const instructors = [
@@ -22,22 +22,21 @@ const instructors = [
   },
   {
     name: "Himanshu Saini",
-    title: "",
+    title: "Specialist @Codeforces",
     specialty: "Problem Solving Strategies",
-    bio: "Ex-Amazon SDE. Helped 200+ students crack top tech interviews. Known for teaching systematic problem-solving approaches.",
-    image: "https://images.pexels.com/photos/1239288/pexels-photo-1239288.jpeg?auto=compress&cs=tinysrgb&w=600",
+    bio: "I’m a full-stack developer helping beginners master C++ and DSA through practical, no-fluff learning — just the way I wish I’d learned.",
+    image: "/static/himanshu.jpg",
     stats: {
-      exp: 5,
-      problems: 700,
+      exp: 3,
+      problems: 900,
       students: 200
     },
-    achievements: "@Codeforces | 5⭐ @CodeChef",
+    achievements: "Specialist Programmer @Infosys | Ex-Masai Technical instructor",
     social: {
-      github: "github.com/nehagupta",
-      twitter: "twitter.com/nehagupta",
-      linkedin: "linkedin.com/in/nehagupta"
+      github: "github.com/himanshu257git",
+      linkedin: "linkedin.com/in/himanshuu257"
     }
-  }
+  },
 ];
 
 const Instructors = () => {
@@ -74,7 +73,7 @@ const Instructors = () => {
                     <img
                       src={instructor.image}
                       alt={instructor.name}
-                      className="w-full h-full object-cover object-center transition-transform duration-500 hover:scale-105"
+                      className="w-full h-full  object-cover transition-transform duration-500 hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent opacity-70"></div>
 
