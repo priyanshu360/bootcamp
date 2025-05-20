@@ -55,7 +55,7 @@ const Hero = () => {
 
           <div className="relative mb-8 max-w-2xl mx-auto px-4">
             <p className="text-base sm:text-xl text-gray-300">
-              🗓️ New batch starts June 2nd
+              🗓️ New batch starts June 7th
             </p>
             <div className="absolute -bottom-2 left-0 right-0 h-px bg-gradient-to-r from-transparent via-fuchsia-500 to-transparent"></div>
           </div>
